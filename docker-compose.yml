@@ -54,19 +54,6 @@ services:
     networks:
       - app-network
 
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin
-    environment:
-      - PMA_ARBITRARY=1
-      - MYSQL_ROOT_PASSWORD=4AC8qXVf7S6bYk5D
-      - MYSQL_USER=alsalam
-      - PMA_HOST=alsalam.ciiosxkfjdbz.us-east-2.rds.amazonaws.com
-    restart: always
-    ports:
-      - 8081:80
-    volumes:
-      - /sessions
 
 #Docker Networks
 networks:
